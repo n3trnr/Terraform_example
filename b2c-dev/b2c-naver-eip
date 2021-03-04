@@ -1,0 +1,9 @@
+resource "aws_eip" "naver-dev-nat-eip" {
+  vpc = true
+  depends_on = ["aws_internet_gateway.naver-dev-igw"]
+	tags { 
+		Name = "naver-dev-nat-eip"
+	}
+}
+
+
